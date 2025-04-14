@@ -72,21 +72,21 @@ body, input {
     /*  background-size: 50px 100px;*/
 
     display: -webkit-flex;
-    background-color: rgb(50, 54, 57);
+    background-color: rgb(40, 40, 40);
     -moz-user-select: none;
     user-select: none;
 
 }
 
 .age-label {
-    color: white;
+    color: #D8A657;
     font-size: 1.2rem;
     line-height: 1;
     margin: 0 0 0 2px;
 }
 
 .count {
-    color: white;
+    color: #D8A657;
     margin: 0;
     font-size: 6rem;
     line-height: 1;
@@ -165,20 +165,20 @@ footer {
 .coin.-one {
     opacity: 1;
     transform-origin: 51% 50%;
-    background: #314c5f;
+    background: #3c3836;
 }
 
 .coin.-two {
     animation: drift 5000ms infinite linear;
     animation-direction: reverse;
     opacity: 1;
-    background: #314c5f;
+    background: #3c3836;
     transform-origin: 50% 49%;
 }
 
 .coin.-three {
     opacity: 1;
-    background: #314c5f;
+    background: #3c3836;
     animation: drift 2500ms infinite linear;
     animation-direction: reverse;
     transform-origin: 50% 49%;
