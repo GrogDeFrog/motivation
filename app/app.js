@@ -5,21 +5,37 @@ document.addEventListener('DOMContentLoaded', function () {
     if (localStorageData) {
         renderAgeLoop();
     } else {
-        document.getElementById('dob-template').style.display = 'block';
+        document.getElementById('date-template').style.display = 'block';
     }
 
-    document.querySelector('form').addEventListener('submit', function (e) {
+    document.getElementById('date-form').addEventListener('submit', function(e) {
         e.preventDefault();
+        let dateInput = document.getElementById('date').value;
 
-        let birthdayDateInput = document.getElementById('date');
-        let birthdayDate = birthdayDateInput.valueAsDate;
+        if (dateInput) {
+            birthDateStr = dateInput;
 
-        if (birthdayDate) {
-            localStorage.setItem('birthdayDate', birthdayDate.getTime());
-            document.getElementById('dob-template').style.display = 'none';
+            document.getElementById('date-template').classList.add('hide');
+            document.getElementById('date-template').style.display = 'none';
+            document.getElementById('time-template').classList.remove('hide');
+            document.getElementById('time-template').style.display = 'block';
+        } else {
+            alert('Please select a valid date.');
+        }
+    });
+    document.getElementById('time-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let timeInput = document.getElementById('time').value;
+        if (timeInput) {
+            let birthDateTime = new Date(birthDateStr + 'T' + timeInput);
+
+            localStorage.setItem('birthdayDate', birthDateTime.getTime());
+            document.getElementById('time-template').classList.add('hide');
+            document.getElementById('time-template').style.display = 'none';
+
             renderAgeLoop();
         } else {
-            return 'incorrect date';
+            alert('Please enter a valid time.');
         }
     });
 

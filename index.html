@@ -21,14 +21,27 @@
         </div>
     </div>
 </div>
-<div id="dob-template" class="hide">
-    <form class="form" method="post">
-        <h1 id="dob" class="age-label">When were you born?</h1>
-        <footer>
-            <label for="date"><input type="date" name="date" id="date"></label>
-            <button type="submit">Motivate</button>
-        </footer>
-    </form>
+<div id="date-template" class="hide">
+  <form id="date-form">
+    <h1 class="age-label">When were you born?</h1>
+    <footer>
+      <label>
+        <input type="date" id="date" name="date">
+      </label>
+      <button type="submit">Submit</button>
+    </footer>
+  </form>
+</div>
+<div id="time-template" class="hide">
+  <form id="time-form">
+    <h1 class="age-label">When were you born?</h1>
+      <footer>
+      <label>
+        <input type="time" step="1" id="time" name="time">
+      </label>
+      <button type="submit">Submit</button>
+    </footer>
+  </form>
 </div>
 
 <div id="age-template" class="hide">
